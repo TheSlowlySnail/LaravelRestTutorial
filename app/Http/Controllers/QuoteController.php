@@ -40,7 +40,7 @@ class QuoteController extends Controller{
             return response()->json(['message'=>'Document not found'], 400);
 
         }
-        $quote->conent = $request->input('content');
+        $quote->content = $request->input('content');
         $quote->save();
         return response()->json(['quote' => $quote], 200);
     }
